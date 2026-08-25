@@ -105,8 +105,17 @@ export default function Header() {
 
         <div className={styles.odessaAtmosphere}>
           <span className={styles.quote}>
-            Поэзия с видом на море
+            Поэзия с видом на море ⚓
           </span>
+          <a
+            href="https://sunmeat.shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.personalLink}
+            title="Перейти на личный сайт"
+          >
+            sunmeat.shop
+          </a>
         </div>
       </div>
     </header>
