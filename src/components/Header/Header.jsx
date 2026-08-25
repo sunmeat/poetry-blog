@@ -11,7 +11,6 @@ export default function Header() {
             viewBox="0 0 64 64"
             aria-hidden="true"
           >
-            {/* Чайка */}
             <path
               d="
                 M10 19
@@ -26,7 +25,6 @@ export default function Header() {
               strokeLinejoin="round"
             />
 
-            {/* Перо */}
             <path
               d="
                 M38 10
@@ -39,7 +37,7 @@ export default function Header() {
               strokeLinejoin="round"
             />
 
-            {/* Ствол пера */}
+
             <path
               d="M17 45 C24 34 31 23 38 10"
               fill="none"
@@ -47,8 +45,7 @@ export default function Header() {
               strokeWidth="1.5"
               strokeLinecap="round"
             />
-
-            {/* Прожилки пера */}
+            
             <path
               d="
                 M22 36 L17 32
@@ -62,7 +59,6 @@ export default function Header() {
               strokeLinecap="round"
             />
 
-            {/* Первая волна */}
             <path
               d="
                 M7 49
@@ -76,7 +72,6 @@ export default function Header() {
               strokeLinecap="round"
             />
 
-            {/* Вторая волна */}
             <path
               d="
                 M7 55
@@ -107,15 +102,6 @@ export default function Header() {
           <span className={styles.quote}>
             Поэзия с видом на море ⚓
           </span>
-          <a
-            href="https://sunmeat.shop"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.personalLink}
-            title="Перейти на личный сайт"
-          >
-            sunmeat.shop
-          </a>
         </div>
       </div>
     </header>
