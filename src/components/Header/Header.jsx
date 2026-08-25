@@ -35,8 +35,8 @@ export default function Header() {
             />
           </svg>
           <span className={styles.brandText}>
-            <span className={styles.brandTitle}>Серебряная тетрадь</span>
-            <span className={styles.brandSubtitle}>стихи и заметки Сани</span>
+            <span className={styles.brandTitle}>Санина писанина</span>
+            <span className={styles.brandSubtitle}>стихи и заметки</span>
           </span>
         </Link>
 
