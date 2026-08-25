@@ -43,9 +43,9 @@ export default function Home() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <p className={styles.eyebrow}>Мой личный дневник в стихах</p>
-        <h1 className={styles.heroTitle}>Серебряная тетрадь</h1>
+        <h1 className={styles.heroTitle}>Санина писанина</h1>
         <p className={styles.heroSubtitle}>
-          Стихотворения, записанные не для славы, а для памяти — <br className={styles.brDesktop} />
+          Стихотворения, записанные на память — <br className={styles.brDesktop} />
           в духе тех вечеров, когда строка ещё умела дышать.
         </p>
         <div className="ornament" aria-hidden="true">
