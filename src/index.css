@@ -1,0 +1,125 @@
+@import './styles/variables.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  background-color: var(--color-parchment);
+  /* Тонкая бумажная фактура: лёгкий градиент + едва заметное зерно */
+  background-image:
+    radial-gradient(circle at 15% 8%, rgba(169, 126, 63, 0.07), transparent 45%),
+    radial-gradient(circle at 85% 92%, rgba(124, 45, 59, 0.05), transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-weight: 600;
+  margin: 0;
+}
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--color-wine);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea, button {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-bronze-light);
+  color: var(--color-ink);
+}
+
+/* Видимый фокус для доступности с клавиатуры */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.container-wide {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* ---- Фирменный элемент: виньетка-разделитель ----
+   Небольшой геометрический орнамент в духе печатных изданий начала XX века,
+   используется между строфами и как разделитель разделов. */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+  color: var(--color-bronze);
+  user-select: none;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  max-width: 140px;
+  background: linear-gradient(to var(--dir, right), transparent, var(--color-bronze) 60%, var(--color-bronze));
+}
+
+.ornament::before { --dir: left; background: linear-gradient(to right, transparent, var(--color-bronze)); }
+.ornament::after { background: linear-gradient(to left, transparent, var(--color-bronze)); }
+
+.ornament-mark {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@media (max-width: 640px) {
+  :root { --space-4: 2rem; --space-5: 3rem; }
+}

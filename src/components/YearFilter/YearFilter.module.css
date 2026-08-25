@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.chip {
+  border: 1px solid var(--color-hairline);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem;
+  font-family: var(--font-caption);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  color: var(--color-ink-soft);
+  transition: all var(--transition);
+}
+
+.chip:hover { border-color: var(--color-bronze); color: var(--color-ink); }
+
+.active {
+  background: var(--color-wine);
+  border-color: var(--color-wine);
+  color: var(--color-parchment);
+}

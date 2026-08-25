@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Стихотворения: читать может любой посетитель,
+    // создавать/редактировать/удалять — только авторизованный автор.
+    // Обновление счётчика reactions разрешено всем (не требует входа),
+    // но остальные поля защищены проверкой affectedKeys.
+    match /poems/{poemId} {
+      allow read: if true;
+
+      allow create, delete: if request.auth != null;
+
+      allow update: if request.auth != null
+        || request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['reactions']);
+    }
+
+    // Комментарии: читать может любой, создавать может любой (гостевые отклики),
+    // редактировать и удалять — только автор.
+    match /comments/{commentId} {
+      allow read: if true;
+      allow create: if request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() < 1000
+        && request.resource.data.poemId is string;
+      allow update, delete: if request.auth != null;
+    }
+  }
+}

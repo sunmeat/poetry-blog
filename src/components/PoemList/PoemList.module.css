@@ -1,0 +1,64 @@
+.empty {
+  text-align: center;
+  font-family: var(--font-caption);
+  font-style: italic;
+  color: var(--color-sepia);
+  padding: var(--space-5) var(--space-2);
+  font-size: 1.1rem;
+}
+
+.yearSection {
+  margin-bottom: var(--space-5);
+}
+
+.yearTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  text-align: center;
+  color: var(--color-wine-deep);
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.yearTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--color-bronze);
+  margin: 0.6rem auto 0;
+}
+
+.monthGroup { margin-bottom: var(--space-3); }
+
+.monthTitle {
+  font-family: var(--font-caption);
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--color-sepia);
+  margin-bottom: var(--space-2);
+  text-transform: lowercase;
+}
+
+.moreWrap {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-4) 0;
+}
+
+.moreButton {
+  border: 1px solid var(--color-wine);
+  background: transparent;
+  color: var(--color-wine);
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--font-caption);
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+}
+
+.moreButton:hover {
+  background: var(--color-wine);
+  color: var(--color-parchment);
+}
