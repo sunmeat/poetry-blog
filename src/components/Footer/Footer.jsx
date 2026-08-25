@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <p className={styles.line}>
-          «Написанное останется, сказанное — забудется.»
+          Verba volant, scripta manent
         </p>
 
         <p className={styles.copy}>
