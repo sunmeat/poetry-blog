@@ -99,9 +99,10 @@ export default function Header() {
         </Link>
 
         <div className={styles.odessaAtmosphere}>
-          <span className={styles.quote}>
-            Поэзия с видом на море ⚓
-          </span>
+        <Link to="/admin" className={styles.quote}>
+          Поэзия с видом на море ⚓
+        </Link>
+      </div>
         </div>
       </div>
     </header>
