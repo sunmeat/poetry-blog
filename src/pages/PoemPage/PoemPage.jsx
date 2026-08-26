@@ -4,6 +4,7 @@ import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from '../../firebase.js'
 import PoemCard from '../../components/PoemCard/PoemCard.jsx'
 import Loader from '../../components/Loader/Loader.jsx'
+import { updateSeo, resetSeo, buildExcerpt, SITE_URL } from '../../utils/seo.js'
 import styles from './PoemPage.module.css'
 
 export default function PoemPage() {
@@ -31,6 +32,16 @@ export default function PoemPage() {
     )
     return unsubscribe
   }, [id])
+
+  useEffect(() => {
+    if (!poem) return
+    updateSeo({
+      title: poem.title,
+      description: buildExcerpt(poem.content),
+      url: `${SITE_URL}/poem/${poem.id}`,
+    })
+    return resetSeo
+  }, [poem])
 
   if (loading) return <Loader />
 
