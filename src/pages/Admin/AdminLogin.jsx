@@ -38,6 +38,7 @@ export default function AdminLogin() {
         </div>
 
        <div>
+          <br></br>
           <p className={styles.aboutEyebrow}>об авторе</p>
           <p className={styles.aboutQuote}>
             записываю то, что вертится в голове.
