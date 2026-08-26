@@ -1,0 +1,90 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--color-hairline);
+  background: rgba(255, 253, 246, 0.6);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-family: var(--font-caption);
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  transition: transform var(--transition), border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.button:hover {
+  border-color: var(--color-wine);
+  color: var(--color-wine-deep);
+  transform: translateY(-1px);
+}
+
+.button:active { transform: translateY(0); }
+
+.icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-parchment);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  animation: reveal 160ms ease-out;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menuItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.menuItem:last-child { border-bottom: none; }
+
+.menuItem:hover {
+  background: rgba(124, 45, 59, 0.06);
+  color: var(--color-wine-deep);
+  text-decoration: none;
+}
+
+.toast {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  white-space: nowrap;
+  font-family: var(--font-caption);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-sepia);
+  background: var(--color-parchment);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.7rem;
+  box-shadow: var(--shadow-card);
+}
