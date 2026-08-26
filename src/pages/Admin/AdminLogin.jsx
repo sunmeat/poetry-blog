@@ -59,7 +59,7 @@ export default function AdminLogin() {
       </div>
 
       <div className={styles.card}>
-        <p className={styles.eyebrow}>Кабинет автора</p>
+        <p className={styles.eyebrow}>Кабинет Сани</p>
         <h1 className={styles.title}>Вход</h1>
         <p className={styles.hint}>
           Вход в систему доступен только автору тетради стихов.
