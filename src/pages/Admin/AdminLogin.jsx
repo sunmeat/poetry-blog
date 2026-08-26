@@ -40,7 +40,7 @@ export default function AdminLogin() {
        <div>
           <p className={styles.aboutEyebrow}>об авторе</p>
           <p className={styles.aboutQuote}>
-            записываю то, что вертится в голове, пока я сижу на балконе у себя дома.
+            записываю то, что вертится в голове.
             <br />
             здесь — стихи, мысли, воспоминания и наблюдения.
             <br />
@@ -62,7 +62,7 @@ export default function AdminLogin() {
         <p className={styles.eyebrow}>Кабинет автора</p>
         <h1 className={styles.title}>Вход</h1>
         <p className={styles.hint}>
-          Раздел доступен только автору тетради стихов, Сане.
+          Вход в систему доступен только автору тетради стихов.
         </p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
