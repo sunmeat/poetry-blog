@@ -99,11 +99,11 @@ export default function Header() {
         </Link>
 
         <div className={styles.odessaAtmosphere}>
-        <Link to="/admin" className={styles.quote}>
-          Поэзия с видом на море ⚓
-        </Link>
-      </div>
+          <Link to="/admin" className={styles.quote}>
+            Поэзия с видом на море ⚓
+          </Link>
         </div>
+        
       </div>
     </header>
   )
