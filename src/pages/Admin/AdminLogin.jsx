@@ -32,11 +32,37 @@ export default function AdminLogin() {
 
   return (
     <div className={`container ${styles.page}`}>
+      <div className={styles.about}>
+        <div className={styles.avatar}>
+          <img src="/author.jpg" alt="Автор блога" className={styles.avatarImg} />
+        </div>
+
+       <div>
+          <p className={styles.aboutEyebrow}>об авторе</p>
+          <p className={styles.aboutQuote}>
+            записываю то, что вертится в голове, пока я сижу на балконе у себя дома.
+            <br />
+            здесь — стихи, мысли, воспоминания и наблюдения.
+            <br />
+            без определённой темы и без необходимости что-либо объяснять.
+            <br />
+            иногда это строчка, родившаяся за полночь,
+            <br />
+            иногда — короткая запись между делами.
+            <br />
+            я не тороплю слова: пусть приходят, когда готовы.
+          </p>
+          <p className={styles.aboutNote}>
+            а то, что получается, — с удовольствием потом читаю вслух тем, кому эти строки посвящены :)
+          </p>
+        </div>
+      </div>
+
       <div className={styles.card}>
         <p className={styles.eyebrow}>Кабинет автора</p>
         <h1 className={styles.title}>Вход</h1>
         <p className={styles.hint}>
-          Раздел доступен только автору тетради — для входа используется учётная запись Firebase.
+          Раздел доступен только автору тетради стихов, Сане.
         </p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
