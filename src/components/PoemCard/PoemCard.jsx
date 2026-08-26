@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom'
 import { formatPoemDate } from '../../utils/dateUtils.js'
 import Reactions from '../Reactions/Reactions.jsx'
 import Comments from '../Comments/Comments.jsx'
+import ShareButton from '../ShareButton/ShareButton.jsx'
 import styles from './PoemCard.module.css'
+
+const SITE_URL = 'https://pisanina.vercel.app'
 
 function renderStanzas(content) {
   if (!content) return null
@@ -50,7 +53,10 @@ export default function PoemCard({ poem, expandable = true }) {
         <span />
       </div>
 
-      <Reactions poemId={poem.id} initialReactions={poem.reactions} />
+      <div className={styles.actions}>
+        <Reactions poemId={poem.id} initialReactions={poem.reactions} />
+        <ShareButton title={poem.title} url={`${SITE_URL}/poem/${poem.id}`} />
+      </div>
 
       {expandable && <Comments poemId={poem.id} />}
     </article>
