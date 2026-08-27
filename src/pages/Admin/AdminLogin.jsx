@@ -34,6 +34,7 @@ export default function AdminLogin() {
     <div className={`container ${styles.page}`}>
       <div className={styles.about}>
         <div className={styles.avatar}>
+          <br></br>
           <img src="/author.jpg" alt="Автор блога" className={styles.avatarImg} />
         </div>
 
